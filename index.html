@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="publisher" content="Tauch-Club Stuttgart e.V.">
+	<meta name="copyright" content="Copyright Tauch-Club Stuttgart e.V.">
+	<meta name="author" content="Peter Sp&auml;th">
+	<meta name="keywords" content="Tauchen, Unterwasserrugby, Schnorcheln, Tauchtraining, Tauchausbildung, Tauchen im Verein, Tauchen in Stuttgart, Tauchclub Stuttgart, Tauch-Club Stuttgart, TCS">
+	<meta name="description" content="Tauchen & Unterwasserrugby im Tauch-Club Stuttgart &bull; 
+									Du willst Tauchen lernen, Deine Tauchkenntnisse vertiefen, Kondition aufbauen, suchst Gleichgesinnte oder den sportlichen Wettkampf im Unterwasserrugby?
+									Dann bist Du bei uns richtig! Wir bieten an 4 Abenden Trainingsm&ouml;glichkeiten in verschiedenen Stuttgarter Hallenb&auml;dern.">
+	<meta name="date" content="25.07.2025">
+	<meta name="language" content="de">
+	<link rel="icon" href="landing/img/tcs.ico" sizes="16x16" type="image/vnd.microsoft.icon">
+	<link rel="shortcut icon" href="landing/img/tcs.ico">
+	<link rel="start" href="https://www.tauchclub-stuttgart.de/" title="Tauch-Club-Stuttgart e.V.">
+	<base href="https://www.tauchclub-stuttgart.de/">
+<!--
+	<link rel="stylesheet" href="./css/TCSlanding.css" id="stylesheet"> 
+	<link rel="alternate stylesheet" href="./css/classic.css" title="duotone">
+-->
+	<title>Tauch-Club Stuttgart e.V. - Tauchen & Unterwasserrugby in Stuttgart</title>
+	<style>
+@charset "utf-8";
+/* CSS Document */
+/* latin-ext */
+/* Local installed google font - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/landing/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Grundlayout aus SELFHTML-Beispiele */
+html {
+  background: #326CB3;
+  color: #F0F0F0;	
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 65em;
+}
+
+/* Auf der Startseite wird das Bild aus- und als Hintergrundbild eingeblendet. */
+
+#index {
+  background: #326CB3 url("./landing/img/background.jpg") 0px 0px no-repeat;
+  background-size: contain;
+}
+
+#index header  {
+  height: 30em;
+}
+#index img {display: none;}
+
+h1, h2 {
+/*  -webkit-text-decoration: underline dashed;	
+  text-decoration: underline dashed;	*/
+  text-align: center;
+}
+
+
+h3 { padding-top: 2em; }
+
+/*
+#logo {
+  border: 1px solid transparent; 
+  font: 0/0 a; 
+  position: relative;
+}
+*/
+
+#logo {
+  position: absolute;	
+  content: url("./landing/img/TCSlogo.svg");
+  background: transparent;
+  margin: 0.1em 0em 0em -1.5em;
+  height: 1em;
+}
+
+#index img.icon {
+  display: block;
+  float: left;
+  margin-right: 0.5em;
+  height: 1.2em;
+}
+
+#index img.ext_icon {
+	display: block;
+	margin: 1em;
+	max-height: 3em;
+	max-width: 100%;
+}
+#index ul.link_icons li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+#index img.qr {
+	display: inline;
+	height: 3em;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline dotted;
+}
+
+a:hover,
+a:focus {
+	background: #326CB3;
+	color: #F0F0F0;
+}
+
+/* table definitions */
+table, th, td { 
+  	border-collapse: collapse;
+}
+
+th, td {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	white-space: normal;
+}
+
+th {
+	border-bottom: 1px #326CB3 solid;
+}
+
+tr.stripes:nth-child(even) {
+	background-color: #326CB3; 
+	background-color: rgba(50, 108, 179, 0.1);
+}
+
+.align_left { text-align:left; }
+.align_center { text-align:center; }
+.align_right { text-align:right; }
+.float_left { float: left; }
+
+/******************************************/
+/* info box nur gewählten Inhalt anzeigen */
+/* Inhalte alle aus */
+.inhalt { display: none; }
+
+/* news (Aktuelles) ein */
+#news:target.inhalt { display: block; }
+/* über ein */
+#about:target.inhalt { display: block; }
+/* tauchen ein */
+#tauchen:target.inhalt { display: block; }
+/* uwr ein */ 
+#uwr:target.inhalt { display: block; }
+/* download ein */
+#download:target.inhalt { display: block; }
+
+#welcome h2, #welcome p, 
+.inhalt h2, .inhalt h3, .inhalt h4, .inhalt p, .inhalt table, 
+#register h2, #register p {
+	margin: 1em;
+}
+
+
+/* responsives Layout */
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Mobile first - alle Dokument-Blöcke bekommen 100% Breite */
+header, nav, nav a, article, section, aside, footer {
+  border-radius: 0 0.5em 0.5em;
+  padding: 10px;
+  margin: 10px;
+  flex: 1 100%;
+}
+
+article, aside, .inhalt {
+	background-color: #F0F0F0;
+	color: #326CB3;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+}
+header * {
+  flex: 1 1 0%;
+}
+header h1 a { text-decoration:none; }
+header h1 a:hover {	background-color: transparent; }
+header img {
+  flex: 0 0 150px;
+  margin-right: 20px;
+}
+header nav {
+  flex: 1 1 100%;
+}
+nav, nav ul, nav li{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  list-style-type: none;
+  margin: 1em 0;
+  flex: 1 1 100%;
+}
+nav a {
+  display: inline-block;
+  width: 95%;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  background: #326CB3;
+  background-color: rgba(50, 108, 179, 0.5);
+  color: #F0F0F0;
+  border: 1px solid #F0F0F0;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+}
+footer * {
+  flex: 1 1 0%;
+  justify-content: space-between;
+}
+footer p {
+  text-align: center;
+}
+
+#welcome {
+	order: 1;
+}
+
+article {
+	order: 2;
+}
+	
+#register {
+	order: 3;
+}
+
+footer {
+	order: 4;
+}
+
+.warning {
+	background-color: #326CB3;
+	border-radius: 0.5em 0.5em;
+	color:#F0F0F0;
+	font-weight: bold;
+	padding: 2px;
+	text-align: center;
+}
+
+/* Accordion */
+.accordion_panel { 
+	display: none;
+	font-weight: normal;
+}
+
+div.accordion { 
+	padding:2px; 
+	border: 1px solid #326CB3;
+	font-weight: bold;
+	margin: 0 1em 0 1em;
+}
+input.accordion { display:none; }
+label.accordion { 
+	cursor: pointer;
+	width: 100%;
+}
+
+input[id="info-training"]:checked~div[id="unfold-info-training"].accordion_panel, 
+input[id="info-equipment"]:checked~div[id="unfold-info-equipment"].accordion_panel,
+input[id="info-fee"]:checked~div[id="unfold-info-fee"].accordion_panel,
+input[id="dive-training"]:checked~div[id="unfold-dive-training"].accordion_panel,
+input[id="uwr-description"]:checked~div[id="unfold-uwr-description"].accordion_panel,
+input[id="uwr-who"]:checked~div[id="unfold-uwr-who"].accordion_panel,
+input[id="uwr-training"]:checked~div[id="unfold-uwr-training"].accordion_panel {
+	display: block;
+}
+
+
+
+/* Large screens & Smart Phones und Tablets mit mittlerer Auflösung */
+@media all and (min-width: 50em) {
+	#index header  {
+		height: 36em;
+	}
+
+	nav ul {
+		position: relative;
+		flex-direction: row;
+		top: -13em;
+	}
+	nav li {
+		flex: 1 auto;
+		text-align: center;
+	}
+	
+	nav a {
+		width: max-content;	
+		border-radius: 0.5em;
+		color: #F0F0F0;	 
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+	article {
+		order: 2;
+		/* Der Article wird 2.5x so breit wie die beiden asides! */
+		flex: 5 1 0%;
+	}
+	aside {
+		flex: 2 1 0%;
+	}
+	
+	#register {
+		order: 3;
+	}
+
+	#logo:before {
+		top: -1em;
+		left: -5em;
+	}	
+	
+}
+
+@media all and (min-width: 60em) {
+	#index header  {
+		height: 41em;
+	}
+}
+
+@media all and (max-width: 30em)
+{
+	h1 {
+		font-size: 1.5em;
+	}
+}
+
+
+@media print {
+	body { orphans: 3; }
+	#index * {
+		color: black;
+		background-color: white;
+	}
+	header h1 { display: block; }
+	header nav { display: none; }
+	article[id="about"]
+	article[id="tauchen"]
+	article[id="uwr"],
+	article[id="download"] {
+		display: block; 
+	}
+	aside[id="welcome"] { display: block; }
+	aside[id="register"] { display: block; }
+	footer { display: none; }
+
+	.accordion_panel {
+		display: block;
+	}
+
+}
+	</style>
+</head>
+<body id="index">
+  	<header>
+		<h1>
+        	<a id="logo" href="" title="zur&uuml;ck zur Startseite">Start</a>
+            <a href="" title="zur&uuml;ck zur Startseite">Tauch-Club Stuttgart e.V.</a>
+        </h1>
+		<nav>
+			<ul>
+				<li><a href="#tauchen"><img src="./landing/img/TCStauchen.svg" alt="Tauchen" class="icon">Tauchen</a></li>
+				<li><a href="#uwr"><img src="./landing/img/TCSuwr.svg" alt="Unterwasserrugby" class="icon">Unterwasserrugby</a></li>
+				<li><a href="#about"><img src="./landing/img/TCSinfo.svg" alt="Info" class="icon">&Uuml;ber uns</a></li>
+				<li><a href="#download"><img src="./landing/img/TCSdownload.svg" alt="Downloads" class="icon">Downloads</a></li>
+				<li><a href="../dw/doku.php?id=intern:news" target="TCSintern"><img src="./landing/img/TCSlogin.svg" alt="login" class="icon">Mitglieder</a></li>
+			</ul>
+		</nav>
+	</header>
+	<aside id="register">
+		<h2>Kennen lernen</h2>
+		<p>
+			Du willst uns unverbindlich kennen lernen? <br>
+			Dann <a href="https://www.TauchClub-Stuttgart.de/register">registriere Dich!</a> <br>
+			<br>
+			Nach erfolgreicher Registrierung kannst Du 6 Wochen unsere Trainingsangebote ausprobieren. Du mußt nur
+		</p>
+		<ul>
+			<li>einen Trainingstermin w&auml;hlen,</li>
+			<li>Deine Badesachen, Tauchmaske, Schnorchel, Flossen packen,</li>
+			<li>los geht's!</li>
+		</ul>
+	</aside>
+	<aside id="welcome">
+		<h2>Willkommen</h2>
+		<p> 
+			Du willst Tauchen lernen, Deine Tauchkenntnisse vertiefen, Kondition aufbauen, suchst Gleichgesinnte oder den sportlichen Wettkampf im Unterwasserrugby?
+			Dann bist Du bei uns richtig! Wir bieten an 4 Abenden Trainingsm&ouml;glichkeiten in verschiedenen Stuttgarter Hallenb&auml;dern. 
+		</p>
+	</aside>
+	<article id="about" class="inhalt">
+		<h2>&Uuml;ber uns</h2>
+		<p> 
+			Wir sind einer der &auml;ltesten Tauchvereine in Deutschland. Als Mitglied des 
+			<a href="https://www.wlt-ev.de/index.html" target="federation">W&uuml;rttembergischen Landesverband f&uuml;r Tauchsport</a> 
+			und des 
+			<a href="https://www.vdst.de/" target="federation">Verband Deutscher Sporttaucher</a> bilden wir nach international anerkannten Standards aus. 
+		</p>
+		<p>
+			Unsere Unterwasserrugby-Teams behaupten sich erfolgreich in den Landes- und Bundesligen.
+		</p>
+		<p>
+			Als Trainingsst&auml;tten nutzen wir Hallenb&auml;der im Nordosten und im S&uuml;den von Stuttgart.
+		</p>
+		<h3>Kontakt</h3>
+		<table>
+			<tr><td>Home page: </td><td><a href="https://www.TauchClub-Stuttgart.de/">www.TauchClub-Stuttgart.de</a></td></tr>
+			<tr><td>&#x45;&#x6D;&#x61;&#x69;&#x6C;&#x3A;</td><td> <a target="_self" href="/dw/doku.php?id=oeffentlich:kontakt"><img src="./landing/img/TCSkontakt.png" alt="Kontakt" class="qr"></a></td></tr>
+		</table>
+		<div class="accordion">
+			<label for="info-training" class="accordion">+/- Training</label><input type="checkbox" id="info-training" class="accordion">
+			<div id="unfold-info-training" class="accordion_panel">
+				<p class="warning">Während der Sommerferien sind die Stuttgarter Hallenb&auml;der geschlossen. Es ist nur Mittwochs im Inselbad Training!</p>
+				<table>
+					<thead>
+						<tr><th class="align_center">Tag</th><th class="align_center">Zeiten</th><th class="align_center">Ort</th><th class="align_center">Gruppe</th></tr>
+					</thead>
+					<tbody>
+						<tr class="stripes"><td class="align_right">Montag</td><td class="align_center">20:45 - 22:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/sportbad">Sportbad Neckarpark</a></td><td class="align_left">freies Training</td></tr>
+						<tr class="stripes"><td class="align_right">Montag</td><td class="align_center">21:00 - 22:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/sportbad">Sportbad Neckarpark</a></td><td class="align_left">Unterwasserrugby</td></tr>
+						<tr class="stripes"><td class="align_right">Mittwoch</td><td class="align_center">20:30 - 22:00</td><td class="align_center"><a target="pools" href="https://www.stuttgarterbaeder.de/inselbad"></a>Inselbad Untert&uuml;rkheim</td><td class="align_left">freies Training / Unterwasserrugby</td></tr>
+<!--						<tr class="stripes"><td class="align_right">Donnerstag</td><td class="align_center">19:30 - 20:30</td><td>Hallenbad Untert&uuml;rkheim</td><td class="align_left">freies Training</td></tr>
+						<tr class="stripes"><td class="align_right">Donnerstag</td><td class="align_center">19:30 - 20:30</td><td class="align_center">Hallenbad Untert&uuml;rkheim</td><td class="align_left">Unterwasserrugby Anf&auml;nger</td></tr>
+						<tr class="stripes"><td class="align_right">Donnerstag</td><td class="align_center">20:30 - 22:00</td><td>Hallenbad Untert&uuml;rkheim</td><td class="align_left">Unterwasserrugby</td></tr>
+-->						<tr class="stripes"><td class="align_right">Freitag</td><td class="align_center">19:30 - 20:15</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">gef&uuml;hrtes Training</td></tr>
+						<tr class="stripes"><td class="align_right">Freitag</td><td class="align_center">20:15 - 21:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">gef&uuml;hrtes Training</td></tr>
+						<tr class="stripes"><td class="align_right">Freitag</td><td class="align_center">20:15 - 21:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">freies Training</td></tr>
+						<tr class="stripes"><td class="align_right">Sonntag</td><td class="align_center">17:30 - 19:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">freies Training</td></tr>
+						<tr class="stripes"><td class="align_right">Sonntag</td><td class="align_center">17:30 - 19:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">Kinderschwimmen</td></tr>
+						<tr class="stripes"><td class="align_right">Sonntag</td><td class="align_center">17:30 - 19:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">Unterwasserrugby Anf&auml;nger</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<br>
+		<div class="accordion">
+			<label for="info-equipment" class="accordion">+/- Equipment</label><input type="checkbox" id="info-equipment" class="accordion">
+			<div id="unfold-info-equipment" class="accordion_panel">
+				<p>
+					F&uuml;r die Tauchausbildung verleihen wir die notwendige technisch Ausr&uuml;stung, wie Lungenautomat, Pressluftflasche, Rettungsweste. Tauchanz&uuml;ge m&uuml;ssen eng sitzen um zu w&auml;rmen. Deswegen und aus hygienischen Gr&uuml;nden verleihen wir keine Tauchanz&uuml;ge.
+				</p>
+				<p>
+					Zum F&uuml;llen der Pressluftflasche betreiben wir einen Kompressor.
+				</p>
+			</div>
+		</div>
+		<br>
+		<div class="accordion">
+			<label for="info-fee" class="accordion">+/- Mitgliedsbeitr&auml;ge</label><input type="checkbox" id="info-fee" class="accordion">
+			<div id="unfold-info-fee" class="accordion_panel">
+				<table>
+					<thead>
+						<tr><th class="align_center"></th><th class="align_center">Jahres<wbr>beitrag<sup>*</sup></th><th class="align_center">Aufnahme<wbr>geb&uuml;hr<br>(einmalig)</th><th class="align_center">Arbeits<wbr>stunden<br>(jährlich)<sup>**</sup></th></tr>
+					</thead>
+					<tbody>
+						<tr class="stripes"><td class="align_right">Mitgliederkinder 10 bis 18 Jahre</td><td class="align_right">&euro; 33,-</td><td class="align_right"></td><td class="align_center"></td></tr>
+						<tr class="stripes"><td class="align_right">Jugendliche bis 18 Jahre</td><td class="align_right">&euro; 66,-</td><td class="align_right">&euro; 25,-</td><td class="align_center"></td></tr>
+						<tr class="stripes"><td class="align_right">Auszubildende ab 18 Jahre</td><td class="align_right">&euro; 84,-</td><td class="align_right">&euro; 65,-</td><td class="align_center">20</td></tr>
+						<tr class="stripes"><td class="align_right">Familienangeh&ouml;rige</td><td class="align_right">&euro; 66,-</td><td class="align_right"></td><td class="align_center">20</td></tr>
+						<tr class="stripes"><td class="align_right">G&auml;ste Auszubildende</td><td class="align_right">&euro; 66,-</td><td class="align_right"></td><td class="align_center"></td></tr>
+						<tr class="stripes"><td class="align_right">G&auml;ste</td><td class="align_right">&euro; 84,-</td><td class="align_right"></td><td class="align_center"></td></tr>
+						<tr class="stripes"><td class="align_right">Ordentliche Mitglieder</td><td class="align_right">&euro; 126,-</td><td class="align_right">&euro; 130,-</td><td class="align_center">20</td></tr>
+						<tr class="stripes"><td class="align_right">Senioren</td><td class="align_right">&euro; 66,-</td><td class="align_right"></td><td class="align_center"></td></tr>
+					</tbody>
+				</table>
+				<p>
+					<sup>*</sup>&nbsp;&nbsp;&nbsp;im ersten Jahr anteilige Monate, K&uuml;ndigung immer zum Jahresende<br>
+					<sup>**</sup>&nbsp;Arbeitsstunden pro Jahr in den ersten vier Mitgliedschaftsjahren
+				</p>
+			</div>
+		</div>
+	</article>
+	<article id="tauchen" class="inhalt">
+		<h2>Tauchen</h2>
+		<p><strong><i>70% der Erde sind vom Wasser bedeckt - Tauche ein in eine stille, geheimnisvolle Welt!</i></strong></p> 
+		<p>
+			Sporttauchen ist eine Freizeitbesch&auml;ftigung, bei der die k&ouml;rperliche Bet&auml;tigung, Spaß und das Erleben der Unterwasserwelt im Vordergrund stehen. 
+			Grunds&auml;tzlich wird zwischen Ger&auml;tetauchen und Apnoetauchen ohne technische Hilfsmittel unterschieden, wobei Letzteres auch als Leistungssport betrieben wird. 
+			Sporttauchen unterliegt in einigen L&auml;ndern besonderen gesetzlichen Regelungen und bedarf einer besonderen Ausbildung sowie einer Genehmigung f&uuml;r den jeweiligen Tauchplatz.
+		</p>
+		<p>
+			Ger&auml;tetauchen bezeichnet das Tauchen mit k&uuml;nstlicher und autonomer Atemgasversorgung, im Gegensatz zum Apnoetauchen. 
+			Üblicherweise f&uuml;hrt der Taucher ein Drucklufttauchger&auml;t zur Atemgasversorgung mit sich. 
+			Es kann auch zwischen technischem Tauchen und normalem Sporttauchen unterschieden werden. 
+			Diese beiden Disziplinen haben teilweise unterschiedliche Regeln, Ausbildungen und Ausr&uuml;stungen. 
+			Beim Sporttauchen wird Druckluft oder Nitrox als Atemgas verwendet und nicht, wie mancher einer meint, reiner Sauerstoff. 
+			Meist wird zur Erh&ouml;hung der Sicherheit in einem Buddyteam oder einer kleinen Gruppe getaucht.
+		</p>
+		<div class="accordion">
+			<label for="dive-training" class="accordion">+/- Trainingszeiten Tauchen</label><input type="checkbox" id="dive-training" class="accordion">
+			<div id="unfold-dive-training" class="accordion_panel">
+				<p class="warning">Während der Sommerferien sind die Stuttgarter Hallenb&auml;der geschlossen. Es ist nur Mittwochs im Inselbad Training!</p>
+				<table>
+					<thead>
+						<tr><th class="align_center">Tag</th><th class="align_center">Zeiten</th><th class="align_center">Ort</th><th class="align_center">Gruppe</th></tr>
+					</thead>
+					<tbody>
+						<tr class="stripes"><td class="align_right">Montag</td><td class="align_center">20:45 - 22:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/sportbad">Sportbad Neckarpark</a></td><td class="align_left">freies Training</td></tr>
+						<tr class="stripes"><td class="align_right">Mittwoch</td><td class="align_center">20:30 - 22:00</td><td class="align_center"><a target="pools" href="https://www.stuttgarterbaeder.de/inselbad"></a>Inselbad Untert&uuml;rkheim</td><td class="align_left">freies Training</td></tr>
+<!--						<tr class="stripes"><td class="align_right">Donnerstag</td><td class="align_center">19:30 - 20:30</td><td>Hallenbad Untert&uuml;rkheim</td><td class="align_left">freies Training</td></tr>
+-->						<tr class="stripes"><td class="align_right">Freitag</td><td class="align_right">19:30 - 20:15</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">gef&uuml;hrtes Training</td></tr>
+						<tr class="stripes"><td class="align_right">Freitag</td><td class="align_right">20:15 - 21:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">gef&uuml;hrtes Training</td></tr>
+						<tr class="stripes"><td class="align_right">Freitag</td><td class="align_right">20:15 - 21:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">freies Training</td></tr>
+						<tr class="stripes"><td class="align_right">Sonntag</td><td class="align_right">17:30 - 19:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">freies Training</td></tr>
+						<tr class="stripes"><td class="align_right">Sonntag</td><td class="align_right">17:30 - 19:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">Kinderschwimmen</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</article>
+	<article id="uwr" class="inhalt">
+		<h2>Unterwasserrugby</h2>
+		<p><strong><i>1 Ball - 2 Mannschaften - 3 Dimensionen - das ist Unterwasserrugby!</i></strong></p>
+		<p>
+			Im Gegensatz zu anderen Ballsportarten k&ouml;nnen die Spieler im Unterwasserrugby alle drei Dimensionen f&uuml;r ihre Bewegung nutzen. 
+			Spieler k&ouml;nnen sich nicht nur wie beim Fußball, Handball, Basketball usw. vorne, hinten, rechts und links anbieten, sondern zus&auml;tzlich auch &uuml;ber und unter dem Ballf&uuml;hrer. 
+			Das gibt dem ganzen Spielgeschehen einen eigenen Reiz und f&uuml;hrt selbst bei erfahrenen Spielern noch zu Pannen.
+		</p>
+		<p>
+			Wer Unterwasserrugby nicht nur als Trainingserg&auml;nzung betreiben m&ouml;chte, kann sich als Mitglied eines unserer Unterwasserrugby-Teams im sportlichen Wettkampf messen. 
+			Wir haben Teams in der 1.ten Bundesliga und in der Landesliga Baden-W&uuml;rttemberg.
+		</p>
+		<div class="accordion">
+			<label for="uwr-description" class="accordion">+/- Was ist Unterwasserrugby?</label><input type="checkbox" id="uwr-description" class="accordion">
+			<div id="unfold-uwr-description" class="accordion_panel">
+				<p>
+					Der Ball im Unterwasserruby ist mit Salzwasser gef&uuml;llt. Dadurch sinkt er im Wasser mit ca. 1 Meter / Sekunde. 
+					Zwei K&ouml;rbe auf dem Beckengrund sind die Tore. Sie haben etwa den Durchmesser eines Basketballkorbs. 
+					Ein Ligaspiel geht 2 x 15 Minuten effektive Spielzeit, d.h. bei jeder Spielunterbrechung wird die Uhr angehalten. 
+					Das Spielfeld ist der tiefe Teil eines Schwimmbeckens oder ein Sprungbecken.<br>
+					<br>
+					Jede Mannschaft besteht aus mindesten 6 Spielern im Wasser. Zus&auml;tzlich k&ouml;nnen bis zu 6 weitere Spieler am Beckenrand auf Ihren Einsatz warten. 
+					Sie wechseln fliegend ein, &auml;hnlich wie beim Eishockey. Sobald ein Spieler das Wasser verlassen hat, kann der n&auml;chste hinein.<br>
+					<br>
+					Unter Beachtung von ein paar Grundregeln kann man an einem Unterwasserrugbytraining teilnehmen:
+				</p>
+				<ul>
+					<li>nur der ballbesitzende Spieler darf angefasst werden und kann seinerseits Gegner festhalten</li>
+					<li>kratzen, beissen, schlagen, treten ist nicht erlaubt</li>
+					<li>den Korb kann man mit der K&ouml;rper abdecken, dabei darf man sich aber weder darin verkeilen noch daran festhalten</li>
+					<li>der Ball darf nicht aus dem Wasser gehoben werden</li>
+				</ul>
+				<p>Die kompletten Regeln findet man auf den <a href="https://www.vdst.de/zeigen/leistungssport/unterwasser-rugby/" target="federation">Webseiten des VDST</a>.</p>
+			</div>
+		</div><br>
+		<div class="accordion">
+			<label for="uwr-who" class="accordion">+/- Wer kann Unterwasserrugby spielen?</label><input type="checkbox" id="uwr-who" class="accordion">
+			<div id="unfold-uwr-who" class="accordion_panel">
+				<p>
+					Jeder, der k&ouml;rperlich gesund ist, kann Unterwasserrugby spielen! Gewicht spielt im Wasser nur eine untergeordnete Rolle. 
+					Die ben&ouml;tigte Luft, Ausdauer und Erfahrung erwirbt man sich relativ schnell. Dem Beginn einer Unterwasserrugbykarriere steht nichts im Weg!
+				</p>
+			</div>
+		</div><br>
+		<div class="accordion">
+			<label for="uwr-training" class="accordion">+/- Trainingszeiten Unterwasserrugby</label><input type="checkbox" id="uwr-training" class="accordion">
+			<div id="unfold-uwr-training" class="accordion_panel">
+				<p class="warning">Während der Sommerferien sind die Stuttgarter Hallenb&auml;der geschlossen. Es ist nur Mittwochs im Inselbad Training!</p>
+				<table>
+					<thead>
+						<tr><th class="align_center">Tag</th><th class="align_center">Zeiten</th><th class="align_center">Ort</th><th class="align_center">Gruppe</th></tr>
+					</thead>
+					<tbody>
+						<tr class="stripes"><td class="align_right">Montag</td><td class="align_center">21:00 - 22:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/sportbad">Sportbad Neckarpark</a></td><td class="align_left">Unterwasserrugby</td></tr>
+						<tr class="stripes"><td class="align_right">Mittwoch</td><td class="align_center">20:30 - 22:00</td><td class="align_center"><a target="pools" href="https://www.stuttgarterbaeder.de/inselbad"></a>Inselbad Untert&uuml;rkheim</td><td class="align_left">Unterwasserrugby</td></tr>
+<!--						<tr class="stripes"><td>Donnerstag</td><td class="align_right">19:30 - 20:30</td><td class="align_center">Hallenbad Untert&uuml;rkheim</td><td class="align_left">Unterwasserrugby Anf&auml;nger</td></tr>
+						<tr class="stripes"><td class="align_right">Donnerstag</td><td class="align_center">20:30 - 22:00</td><td>Hallenbad Untert&uuml;rkheim</td><td class="align_left">Unterwasserrugby</td></tr>
+-->						<tr class="stripes"><td class="align_right">Sonntag</td><td class="align_right">17:30 - 19:30</td><td class="align_center"><a target="pools" href="https://stuttgarterbaeder.de/hbsonnenberg">Hallenbad Sonnenberg</a></td><td class="align_left">Unterwasserrugby Anf&auml;nger</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</article>
+	<article id="download" class="inhalt">
+		<h2>Downloads & Links</h2>
+		<h3>Formulare</h3>
+		<ul>
+			<li><a href="https://www.tauchclub-stuttgart.de/landing/forms/TCS-Aufnahmeantrag.pdf" target="form">TCS-Aufnahmeantrag</a></li>
+			<li><a href="https://www.tauchclub-stuttgart.de/landing/forms/TCS-Datenschutzerklaerung.pdf" target="form">TCS-Datenschutzerkl&auml;rung</a></li>
+			<li><a href="https://www.tauchclub-stuttgart.de/dw/lib/exe/fetch.php?media=oeffentlich:download:tcs-satzung.pdf" target="form">Satzung des Tauch-Club Stuttgart e.V.</a></li>
+			<li><a href="https://www.tauchclub-stuttgart.de/landing/forms/TCS-AufnahmeantragCheckliste.pdf" target="form">TCS-Checkliste zum Aufnahmeantrag</a></li>
+		</ul>
+		<h3>Links</h3>
+		<h4>Tauchverb&auml;nde</h4>
+		<p>Unsere Ausbildung wird international anerkannt, weil wir nach den Standards nationaler und internationaler Tauchverb&auml;nde ausbilden.</p>
+		<ul class="link_icons">
+			<li><a href="https://www.wlt-ev.de/index.html" target="federation"><img src="./landing/img/csm_WLTswgr_b1d7cb1cf0.png" alt="W&uuml;rttembergischer Landesverband f&uuml;r Tauchsport (WLT)" class="ext_icon"></a></li>
+			<li><a href="https://www.vdst.de/" target="federation"><img src="./landing/img/VDST_blau.png" alt="Verband Deutscher Sporttaucher (VDST)" class="ext_icon"></a></li>
+			<li><a href="http://www.cmas.org/" target="federation"><img src="./landing/img/cmas-official-website.png" alt="Confédération Mondiale des Activités Subaquatiques (CMAS)" class="ext_icon"></a></li>
+		</ul>
+		<h4>Trainingsst&auml;tten</h4>
+		<p>Wir nutzen die Frei- und Hallenb&auml;der der Stadt Stuttgart f&uuml;r unser Training.</p>
+		<ul class="link_icons">
+			<li><a href="https://stuttgarterbaeder.de/hbsonnenberg" target="pools"><img src="./landing/img/hb_sonnenberg.png" alt="Hallenbad Sonnenberg" class="ext_icon"></a></li>
+			<li><a href="https://stuttgarterbaeder.de/sportbad" target="pools"><img src="./landing/img/hb_neckarpark.png" alt="Sportbad Neckarpark" class="ext_icon"></a></li>
+			<li><a href="https://stuttgarterbaeder.de/inselbad" target="pools"><img src="./landing/img/fb_untertuerkheim.png" alt="Inselbad Untert&uuml;rkheim" class="ext_icon"></a></li>
+		</ul>
+		<h4>Tauchen & Gesundheit</h4>
+		<ul class="link_icons">
+			<li><a href="http://www.druckkammer-ludwigsburg.de/" target="health"><img src="./landing/img/Background-DCS-neu2-1920x480.jpg" alt="Druckkammer Ludwigsburg - DCS1" class="ext_icon"></a></li>
+			<li><a href="https://www.gtuem.org/" target="health"><img src="./landing/img/gtuem_header_logo.png" alt="Gesellschaft f&uuml;r Tauch- und &Uuml;berdruckmedizin" class="ext_icon"></a></li>
+		</ul>
+	</article>
+	<footer>
+		<p id="copyright">
+			&copy; Tauch-Club Stuttgart e.V. - 
+			<a target="_self" href="/dw/doku.php?id=oeffentlich:kontakt">Kontakt</a> - 
+			<a target="_self" href="/dw/doku.php?id=oeffentlich:impressum">Impressum</a> - 
+			<a target="_self" href="/dw/doku.php?id=oeffentlich:datenschutz">Datenschutz</a> - 
+			<a target="facebook" href="https://www.facebook.com/tcstuttgart">Facebook&copy;</a>
+		</p>
+	</footer>
+</body>
+</html>
